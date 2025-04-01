@@ -5,21 +5,32 @@
 		<title>Functions Project</title>
 		<link href="assets/reset.css" rel="stylesheet">
 		<link href="assets/style.css" rel="stylesheet">
-		<script>
-			(function(d) {
-			  var config = {
-				kitId: 'vey0tns',
-				scriptTimeout: 3000,
-				async: true
-			  },
-			  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-			})(document);
-		  </script>
+		<script defer src="assets/script.js"></script>
 	</head>
 	<body>
 		<header> Let the universe decide </header>
-		<img src="assets/image 17.png">
-		<p> Making decisions is exhausting—too many choices, too little brainpower! Sometimes, even picking a snack feels like a life-or-death situation. Sometimes you should just let the universe decide. </p>
+		<p class="summary"> Making decisions is exhausting—too many choices, too little brainpower! 
+			Sometimes, even picking a snack feels like a life-or-death situation. 
+			Sometimes you should just let the universe decide. </p>
+		<div class="container">
+			<h1>The Universe Decides</h1>
+			<form id="dilemmaForm">
+			  <label for="dilemma">What's your dilemma?</label>
+			  <input type="text" id="dilemma" name="dilemma" placeholder="Type your dilemma here..." required>
+		
+			  <label for="option1">Enter your first choice</label>
+			  <input type="text" id="option1" name="option1" placeholder="Enter Option 1" required>
+			  
+			  <label for="option2">Enter your second choice</label>
+			  <input type="text" id="option2" name="option2" placeholder="Enter Option 2" required>
+			  
+			  <label for="option3">Enter your third choice</label>
+			  <input type="text" id="option3" name="option3" placeholder="Enter Option 3" required>
+			  
+			  <button type="button" id="submitButton">Decide</button>
+			</form>
+			<p id="result"></p>
+		  </div>
 	</body>
 	<footer>
 		<p class="text-footer"> Make a decision. Quick. 💡</p>
