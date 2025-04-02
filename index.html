@@ -15,19 +15,30 @@
 		<div class="container">
 			<h1>The Universe Decides</h1>
 			<form id="dilemmaForm">
-			  <label for="dilemma">What's your dilemma?</label>
-			  <input type="text" id="dilemma" name="dilemma" placeholder="Type your dilemma here..." required>
+				<label for="dilemma">What's your dilemma?</label>
+				<input type="text" id="dilemma" name="dilemma" list="dilemmaOptions" placeholder="Type or select your dilemma">
+				<datalist id="dilemmaOptions">
+					<option value="What to snack on?">
+					<option value="What to do over the weekend?">
+					<option value="What movie to watch?">
+					<option value="What to read next?">
+					<option value="Where to travel next?">
+					<option value="What TV series to watch?">
+					<option value="What dessert to eat?">
+					<option value="What to do next in life?">
+				</datalist>
 		
-			  <label for="option1">Enter your first choice</label>
-			  <input type="text" id="option1" name="option1" placeholder="Enter Option 1" required>
-			  
-			  <label for="option2">Enter your second choice</label>
-			  <input type="text" id="option2" name="option2" placeholder="Enter Option 2" required>
-			  
-			  <label for="option3">Enter your third choice</label>
-			  <input type="text" id="option3" name="option3" placeholder="Enter Option 3" required>
-			  
-			  <button type="button" id="submitButton">Decide</button>
+				<label for="option1">Enter your first choice</label>
+				<input type="text" id="option1" name="option1" placeholder="Enter Option 1" required>
+			
+				<label for="option2">Enter your second choice</label>
+				<input type="text" id="option2" name="option2" placeholder="Enter Option 2" required>
+			
+				<label for="option3">Enter your third choice</label>
+				<input type="text" id="option3" name="option3" placeholder="Enter Option 3" required>
+			
+				<button type="button" id="randomButton"> Get Random Options </button>
+				<button type="button" id="submitButton"> Let the Universe Decide </button>
 			</form>
 			<p id="result"></p>
 		  </div>

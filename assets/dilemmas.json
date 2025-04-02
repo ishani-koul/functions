@@ -1,0 +1,34 @@
+[
+  {
+    "dilemma": "What to snack on?",
+    "options": ["Chips", "Chocolate", "Don't snack"]
+  },
+  {
+    "dilemma": "What to do over the weekend?",
+    "options": ["Go for a hike", "Binge-watch a series", "Try cooking a new recipe"]
+  },
+  {
+    "dilemma": "What movie to watch?",
+    "options": ["Inception", "Senna", "Zodiac"]
+  },
+  {
+    "dilemma": "What to read next?",
+    "options": ["Science fiction novel", "Self-help book", "An encyclopedia"]
+  },
+  {
+    "dilemma": "Where to travel next?",
+    "options": ["Maine", "A beach-y place", "Somewhere on the west coast"]
+  },
+  {
+    "dilemma": "What TV series to watch?",
+    "options": ["Severance", "Shrinking", "Ted Lasso"]
+  },
+  {
+    "dilemma": "What dessert to eat?",
+    "options": ["Pie", "Cake", "Ice Cream"]
+  },
+  {
+    "dilemma": "What to do next in life?",
+    "options": ["Chill", "Work on a new project", "Have good food"]
+  }
+]

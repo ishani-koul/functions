@@ -65,6 +65,13 @@ button {
 
 #result {
 	margin-top: 20px;
-	font-size: 18px;
+	font-size: 1rem;
 	font-weight: bold;
+	color: #000000;
+	text-align: center;
+}
+
+button:disabled {
+	background-color: #d7d7d7;
+	color: #808080;
 }
