@@ -71,6 +71,7 @@ button {
 	text-align: center;
 }
 
+
 button:disabled {
 	background-color: #d7d7d7;
 	color: #808080;

@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		const selectedOption = options[randomIndex]; // Get the option at the random index - generated at randomIndex
 
 		// Display the selected option with a fun message.
-		resultElement.textContent = `The universe has spoken: ${selectedOption}!`;
+		resultElement.textContent = `The universe suggests ${selectedOption}!`;
 	});
 
 });
