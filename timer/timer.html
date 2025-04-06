@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Decision Timer</title>
+	<link href="assets/reset.css" rel="stylesheet">
+	<link href="timer.css" rel="stylesheet">
+	<script defer src="timerscript.js"></script>
+</head>
+<body>
+	<h1>Decision Timer</h1>
+
+<!-- Input for the decision -->
+	<div>
+		<label for="decision">What do you want to decide?</label>
+		<input type="text" id="decision" placeholder="Enter your decision">
+	</div>
+
+<!-- Slider to choose time in minutes -->
+	<div>
+		<label for="timeSlider">Choose time (in minutes):</label>
+		<input type="range" id="timeSlider" min="1" max="30" value="5">
+			<span id="sliderValue">5</span> min
+	</div>
+
+<!-- Button to start the timer -->
+	<div>
+		<button id="startButton">Start Timer</button>
+	</div>
+
+<!-- Display area for the countdown timer -->
+	<div id="timer"></div>
+
+<!-- Display area for the funny message -->
+	<div id="message"></div>
+</body>
+</html>

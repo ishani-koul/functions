@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	let dilemmasData = [];
 
 	// Fetch the dilemmas and their options from the JSON file located in the assets folder.
-	fetch('assets/dilemmas.json')
+	fetch('dilemmas.json')
 		.then(response => response.json()) // Parse the JSON response
 		.then(data => {
-			dilemmasData = data; // Save the data into 'dilemmasData'
+			dilemmasData = data; // Savei the data into 'dilemmasData'
 		});
 
 	// Disable the random button - till it receives a selection
