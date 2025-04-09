@@ -7,7 +7,7 @@ const result = document.getElementById("resultMessage");
 let countdown; // the countdown - timer
 let totalSeconds; // the chosen time
 
-// Update the label below the slider when moved
+// time value label updated
 slider.addEventListener("input", () => {
 	const seconds = parseInt(slider.value);
 	timeLabel.textContent = formatTimeText(seconds);
@@ -34,7 +34,7 @@ clearInterval(countdown); // in case there's an existing timer running
 	}, 1000);
 });
 
-// Format time into mm:ss
+// Format time into mm:ss 
 function updateTimerDisplay(seconds) {
 	const minutes = Math.floor(seconds / 60);
 	const secs = seconds % 60;
@@ -44,16 +44,19 @@ function updateTimerDisplay(seconds) {
 // Show the result message at the end
 function showResult(secondsUsed) {
 	const secondsInDay = 86400;
-	const percent = ((secondsUsed / secondsInDay) * 100).toFixed(2);
+	const percent = ((secondsUsed / secondsInDay) * 100).toFixed(3);
 	result.innerHTML = `⏰ You spent <strong>${percent}%</strong> of your day making this decision.`;
+}
+
+// Manually add leading zero for numbers < 10
+function pad(num) {
+	return num < 10 ? "0" + num : num; 
 }
 
 // Convert seconds into human-readable label
 function formatTimeText(seconds) {
-	return seconds < 60 ? `${seconds} seconds` : `${seconds / 60} minute${seconds >= 120 ? "s" : ""}`;
+	return seconds < 60 
+		? `${seconds} seconds` 
+		: `${Math.floor(seconds / 60)} minute${seconds >= 120 ? "s" : ""}`;
 }
 
-// Pad with leading zero if needed (e.g., 05)
-function pad(num) {
-	return String(num).padStart(2, "0");
-}
