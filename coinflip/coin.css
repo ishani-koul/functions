@@ -9,7 +9,6 @@ body{
 	width: 120px;
 	height: 120px;
 	margin: 0 auto 20px;
-	/* perspective: 1000px; */
 	transform-style: preserve-3d;
 	transition: transform 2s;
 }
@@ -30,12 +29,12 @@ body{
 }
 
 .side-one {
-	background-color: #dbaa23;
+	background-color: #000000;
 	transform: rotateY(0deg);
 }
 
 .side-two {
-	background-color: #24b0c9;
+	background-color: #c9ab24;
 	transform: rotateY(180deg);
 }
 
