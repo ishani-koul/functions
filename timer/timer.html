@@ -9,30 +9,16 @@
 	<script defer src="timerscript.js"></script>
 </head>
 <body>
-	<h1>Decision Timer</h1>
-
-<!-- Input-->
-	<div>
-		<label for="decision">What do you want to decide?</label>
-		<input type="text" id="decision" placeholder="Enter your decision">
-	</div>
-
-<!-- Slider -->
-	<div>
-		<label for="timeSlider">Choose time (in minutes):</label>
-		<input type="range" id="timeSlider" min="1" max="30" value="5">
-			<span id="sliderValue">5</span> min
-	</div>
-
-<!-- Button to start the timer -->
-	<div>
+	<div class="container">
+		<h1>Decision Timer ⏳</h1>
+		<label for="timeSlider">Set your decision time:</label>
+		<input type="range" id="timeSlider" min="30" max="1200" step="30" value="60">
+		<div id="timeValue">1 minute</div>
 		<button id="startButton">Start Timer</button>
+		<div id="timerDisplay">00:00</div>
+		<div id="resultMessage"></div>
 	</div>
 
-<!-- Display area for thetimer -->
-	<div id="timer"></div>
-
-<!-- Display area for the message -->
-	<div id="message"></div>
 </body>
 </html>
+
