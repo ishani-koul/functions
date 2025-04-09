@@ -1,21 +1,12 @@
 body {
 	font-family: sans-serif;
-	background-color: #f6f6f6;
+	background-color: #ffffff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
   }
-  
-  .container {
-	text-align: center;
-	background: white;
-	padding: 2rem;
-	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-	max-width: 400px;
-  }
-  
+
   #timeSlider {
 	width: 100%;
 	margin: 1rem 0;
@@ -27,7 +18,7 @@ body {
   }
   
   #timerDisplay {
-	font-size: 3rem;
+	font-size: 2rem;
 	margin-top: 1rem;
 	font-weight: bold;
   }
@@ -35,6 +26,6 @@ body {
   #resultMessage {
 	margin-top: 1rem;
 	font-size: 1.2rem;
-	color: #444;
+	color: #1e1e1e;
   }
   
