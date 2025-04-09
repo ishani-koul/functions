@@ -1,86 +1,89 @@
+:root {
+	--bg-color: #EFEEEB;
+	--text-color: #1E1E1E;
+	--title-font-size: 2rem;
+	--paragraph-font-size: 1.2rem;
+	--margin: 2rem;
+	--padding: 2rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-	background: #11151c;
-	color: #ffffff;
+	background: var(--bg-color);
+	color: var(--text-color);
 	text-align: center;
-	padding: 2rem;
-	margin: 4rem;
+	padding: var(--padding);
+	margin: var(--margin);
   }
 
-  header{
-	color: #dedede;
-  }
-  
-  h1 {
-	font-size: 2.5rem;
-	margin-bottom: 0.5rem;
-  }
-  
-  .intro {
-	font-size: 1.1rem;
-	margin-bottom: 3rem;
-	max-width: 700px;
+header {
+	color: var(--text-color);
+}
+
+h1 {
+	font-size: var(--title-font-size);
+	margin-bottom: 1rem;
+}
+
+.intro {
+	font-size: var(--paragraph-font-size);
+	margin-bottom: var(--margin);
+	max-width: 650px;
 	margin-left: auto;
 	margin-right: auto;
-  }
-  
-  .card-container {
+}
+
+.card-container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 2rem;
-  }
-  
-  .tarot-card {
-	width: 200px;
-	height: 300px;
-	perspective: 1000px;
-  }
-  
-  .card-inner {
+}
+
+.tarot-card {
+	width: 300px;
+	height: 400px;
+	/* perspective: 1000px; */
+}
+
+.card-inner {
 	width: 100%;
 	height: 100%;
-	transition: transform 0.8s;
+	/* transition: transform 0.8s; */
 	transform-style: preserve-3d;
-	cursor: pointer;
-	position: relative;
-  }
-  
-  .tarot-card:hover .card-inner {
+}
+
+.tarot-card:hover .card-inner {
 	transform: rotateY(180deg);
-  }
-  
-  .card-front,
-  .card-back {
+}
+
+.card-front,
+.card-back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
-	border-radius: 12px;
+	border-radius: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 1rem;
-	box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+	padding: var(--padding);
+	/* box-shadow: 0 10px 25px rgba(0,0,0,0.4); */
   }
   
   .card-front {
-	background: linear-gradient(145deg, rgb(5, 47, 72), rgb(14, 17, 20));
+	background: var(--text-color);
 	font-size: 3rem;
   }
   
   .card-back {
-	background: linear-gradient(145deg, #000000, #112028);
+	background: var(--text-color);
+	color: var(--bg-color);
 	transform: rotateY(180deg);
 	flex-direction: column;
-  }
-  
-  .card-back h2 {
-	margin-top: 0;
-	font-size: 1.2rem;
-  }
-  
-  .card-back p {
-	font-size: 0.95rem;
-	margin-top: 0.5rem;
-  }
-  
+}
