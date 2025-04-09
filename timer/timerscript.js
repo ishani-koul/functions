@@ -53,7 +53,7 @@ function pad(num) {
 	return num < 10 ? "0" + num : num; 
 }
 
-// Convert seconds into human-readable label
+// Convert seconds into text
 function formatTimeText(seconds) {
 	return seconds < 60 
 		? `${seconds} seconds` 
