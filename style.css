@@ -1,10 +1,11 @@
 :root {
 	--bg-color: #EFEEEB;
-	--text-color: #1E1E1E;
+	--text-color: #FFFFFF;
+	--card-bg-color: #1E1E1E;
 	--title-font-size: 2rem;
-	--paragraph-font-size: 1.2rem;
-	--margin: 2rem;
-	--padding: 2rem;
+	--paragraph-font-size: 1.1rem;
+	--margin: 3rem;
+	--padding: 3rem;
 }
 
 * {
@@ -16,14 +17,13 @@
 body {
 	font-family: Arial, sans-serif;
 	background: var(--bg-color);
-	color: var(--text-color);
+	color: var(--card-bg-color);
 	text-align: center;
 	padding: var(--padding);
-	margin: var(--margin);
-  }
+}
 
 header {
-	color: var(--text-color);
+	margin-bottom: var(--margin);
 }
 
 h1 {
@@ -33,10 +33,9 @@ h1 {
 
 .intro {
 	font-size: var(--paragraph-font-size);
-	margin-bottom: var(--margin);
-	max-width: 650px;
-	margin-left: auto;
-	margin-right: auto;
+	max-width: 600px;
+	margin: 0 auto var(--margin);
+	color: var(--card-bg-color);
 }
 
 .card-container {
@@ -47,44 +46,37 @@ h1 {
 }
 
 .tarot-card {
+	background: var(--card-bg-color);
+	color: var(--text-color);
 	width: 300px;
 	height: 400px;
-	/* perspective: 1000px; */
-}
-
-.card-inner {
-	width: 100%;
-	height: 100%;
-	/* transition: transform 0.8s; */
-	transform-style: preserve-3d;
-}
-
-.tarot-card:hover .card-inner {
-	transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	border-radius: 8px;
+	border-radius: 10px;
+	padding: 1.5rem;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: var(--padding);
-	/* box-shadow: 0 10px 25px rgba(0,0,0,0.4); */
-  }
-  
-  .card-front {
-	background: var(--text-color);
-	font-size: 3rem;
-  }
-  
-  .card-back {
-	background: var(--text-color);
-	color: var(--bg-color);
-	transform: rotateY(180deg);
 	flex-direction: column;
+	justify-content: center;
+	transition: transform 0.3s ease;
+}
+
+.tarot-card:hover {
+	transform: translateY(-8px);
+}
+
+.tarot-card a {
+	text-decoration: none;
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
+
+.tarot-card h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.tarot-card p {
+	font-size: 1rem;
+	line-height: 1.4;
 }
