@@ -48,6 +48,6 @@ flipButton.addEventListener("click", function() {
 	}
 	
 	// Apply the rotation to the coin
-		coin.style.transform = "rotateY(" + rotationAmount + "deg)";
+	coin.style.transform = "rotateY(" + rotationAmount + "deg)";
 	});
 	
