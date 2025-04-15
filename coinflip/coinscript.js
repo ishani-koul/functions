@@ -24,10 +24,6 @@ flipButton.addEventListener("click", function() {
 	side1.textContent = option1;
 	side2.textContent = option2;
 	
-	// Play the coin flip sound
-	flipSound.currentTime = 0;
-	flipSound.play();
-	
 	// Pick randomly between the two options
 	const randomNumber = Math.random();
 	let isHeads;
