@@ -1,49 +1,99 @@
-body{
-	background: #ffffff;
-	font-family: sans-serif;
-	text-align: center;
-	padding-top: 100px;
+:root {
+	--coin-size: 200px;
+	--color-front: gold;
+	--color-back: silver;
+	--text-color: #000;
+	--bg: #ffffff;
+	--primary: #1e1e1e;
+	--radius: 50%;
+	--transition-speed: 2s;
+	--font: 'Helvetica Neue', sans-serif;
 }
 
-#coin{
-	width: 120px;
-	height: 120px;
-	margin: 0 auto 20px;
+body {
+	background: var(--bg);
+	font-family: var(--font);
+	text-align: center;
+	padding-top: 80px;
+	color: var(--text-color);
+}
+
+h1 {
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+input {
+	padding: 0.7rem 1rem;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 1rem;
+	width: 250px;
+}
+
+button {
+	background-color: var(--primary);
+	color: #f4f4f4;
+	border: none;
+	padding: 10px 28px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 8px;
+	margin-top: 1rem;
+}
+
+.coin-container {
+	perspective: 1000px;
+	height: var(--coin-size);
+	width: var(--coin-size);
+	margin: 0 auto;
+}
+
+.coin {
+	width: var(--coin-size);
+	height: var(--coin-size);
+	border-radius: var(--radius);
+	position: relative;
 	transform-style: preserve-3d;
-	transition: transform 2s;
+	transition: transform var(--transition-speed) ease;
+	background: none; 
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .side {
 	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	border-radius: 50%;
+	border-radius: var(--radius);
+	backface-visibility: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 14px;
-	color: white;
+	padding: 1rem;
+	font-size: 1rem;
+	font-weight: bold;
 	text-align: center;
-	padding: 10px;
-	backface-visibility: hidden;
+	box-sizing: border-box;
 }
 
-.side-one {
-	background-color: #000000;
+.front {
+	background-color: var(--color-front);
 	transform: rotateY(0deg);
+	color: var(--text-color);
 }
 
-.side-two {
-	background-color: #c9ab24;
+.back {
+	background-color: var(--color-back);
 	transform: rotateY(180deg);
-}
-
-button {
-	background-color: #1e1e1e;
-	color: #f4f4f4;
-	border: none;
-	margin-top: 2rem;
-	padding: 8px 24px;
-	font-size: 16px;
-	cursor: pointer;
+	color: var(--text-color);
 }
