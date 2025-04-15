@@ -19,3 +19,35 @@ flipButton.addEventListener("click", function() {
 		alert("Please enter both options before flipping the coin!");
 	return;
 	}
+
+	// Set the text on the coin sides
+	side1.textContent = option1;
+	side2.textContent = option2;
+	
+	// Play the coin flip sound
+	flipSound.currentTime = 0;
+	flipSound.play();
+	
+	// Pick randomly between the two options
+	const randomNumber = Math.random();
+	let isHeads;
+	
+	if (randomNumber < 0.5) {
+		isHeads = true;
+	} else {
+		isHeads = false;
+	}
+	
+	// Choose how much the coin should spin
+	let rotationAmount;
+	
+	if (isHeads === true) {
+		rotationAmount = 1800; // 5 full spins
+	} else {
+		rotationAmount = 1980; // 5.5 full spins
+	}
+	
+	// Apply the rotation to the coin
+		coin.style.transform = "rotateY(" + rotationAmount + "deg)";
+	});
+	
