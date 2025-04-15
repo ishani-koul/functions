@@ -9,10 +9,22 @@
 	</head>
 <body>
 	<h1>Coin Flip</h1>
-	<div id="coin">
+	<!-- <div id="coin">
 		<div class="side side-one">You got this! </div>
 		<div class="side side-two">Nvm. You don't need this. </div>
 	</div>
-	 <button id="flipButton">Flip</button>
+	 <button id="flipButton">Flip</button> -->
+	<div class="inputs">
+		<input type="text" id="option1" placeholder="Enter Option 1">
+		<input type="text" id="option2" placeholder="Enter Option 2">
+		<button id="flipButton">Flip the Coin 🪙</button>
+	</div>
+	<div class="coin-container">
+		<div class="coin" id="coin">
+			<div class="side front" id="sideA">Option A</div>
+			<div class="side back" id="sideB">Option B</div>
+		</div>
+	</div>
+	<audio id="flipSound" src="https://pixabay.com/sound-effects/coin-flip-shimmer-85750/"></audio>
 </body>
 </html>
