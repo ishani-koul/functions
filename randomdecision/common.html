@@ -1,49 +1,66 @@
 <!DOCTYPE html>
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>Functions Project</title>
-		<link href="assets/reset.css" rel="stylesheet">
-		<link href="common.css" rel="stylesheet">
-		<script defer src="script.js"></script>
-	</head>
-	<body>
-		<header> Let the universe decide </header>
-		<p class="summary"> Making decisions is exhausting—too many choices, too little brainpower! 
-			Sometimes, even picking a snack feels like a life-or-death situation. 
-			Sometimes you should just let the universe decide. </p>
-		<div class="container">
-			<h1>The Universe Decides</h1>
-			<form id="dilemmaForm">
-				<label for="dilemma">What's your dilemma?</label>
-				<input type="text" id="dilemma" name="dilemma" list="dilemmaOptions" placeholder="Type or select your dilemma">
-				<datalist id="dilemmaOptions">
-					<option value="What to snack on?"></option>
-					<option value="What to do over the weekend?"></option>
-					<option value="What movie to watch?"></option>
-					<option value="What to read next?"></option>
-					<option value="Where to travel next?"></option>
-					<option value="What TV series to watch?"></option>
-					<option value="What dessert to eat?"></option>
-					<option value="What to do next in life?"></option>
-				</datalist>
-		
-				<label for="option1">Enter your first choice</label>
-				<input type="text" id="option1" name="option1" placeholder="Enter Option 1" required>
-			
-				<label for="option2">Enter your second choice</label>
-				<input type="text" id="option2" name="option2" placeholder="Enter Option 2" required>
-			
-				<label for="option3">Enter your third choice</label>
-				<input type="text" id="option3" name="option3" placeholder="Enter Option 3" required>
-			
-				<button type="button" id="randomButton"> Get Random Options </button>
-				<button type="button" id="submitButton"> Let the Universe Decide </button>
-			</form>
-			<p id="result"></p>
-		  </div>
-	</body>
-	<footer>
-		<p class="text-footer"> Make a decision. Quick. 💡</p>
-	</footer> 
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Random Decision Maker</title>
+	<link href="assets/reset.css" rel="stylesheet">
+	<link href="common.css" rel="stylesheet">
+	<script defer src="script.js"></script>
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'vey0tns',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'vey0tns',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+</head>
+<body>
+	<header>
+		<div class="logo-bar">
+			<span class="block block-yellow"></span>
+			<span class="block block-purple"></span>
+			<span class="block block-orange"></span>
+		</div>
+	</header>
+
+	<main class="main-container">
+		<h1>Random decision maker</h1>
+		<form id="dilemmaForm">
+			<label for="dilemma">What is your dilemma?</label>
+			<input type="text" id="dilemma" placeholder="e.g. What to eat?" required>
+
+			<label for="option1">Option 1</label>
+			<input type="text" id="option1" placeholder="Enter option 1" required>
+
+			<label for="option2">Option 2</label>
+			<input type="text" id="option2" placeholder="Enter option 2" required>
+
+			<div id="additionalOpt"></div>
+
+			<button type="button" id="addOptionButton" class="link-button">Add option</button>
+			<button type="submit" id="submitButton" class="primary-button">Decide for me</button>
+		</form>
+	</main>
+
+	<div class="modal hidden" id="resultModal">
+		<div class="modal-content">
+			<p class="modal-subtitle">The universe decided</p>
+			<h2 class="modal-result" id="decisionOutput">Sushi</h2>
+			<button id="closeModal">Great, thanks!</button>
+		</div>
+	</div>
+</body>
 </html>
