@@ -6,7 +6,7 @@
 	--card-2-color: #A4AEFA;
 	--card-3-color: #EA633A;
 	--title-font-size: 2rem;
-	--paragraph-font-size: 1.1rem;
+	--paragraph-font-size: 1.2rem;
 	--margin: 3rem;
 	--padding: 3rem;
 }
@@ -54,16 +54,15 @@ h1 {
 .card-container {
 	display: flex;
 	justify-content: center;
-	gap: 1rem;
-	flex-wrap: wrap;
+	gap: 0.5rem;
 	flex-direction: row;
 }
 
 #tarot-card {
 	width: 60vw;
-	max-width: 150px;
+	max-width: 110px;
 	height: 220px;
-	border-radius: 8px;
+	border-radius: 4px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -97,6 +96,9 @@ h1 {
 }
 
 .why-use {
+	font-family: "kepler-std", serif;
+	font-weight: 300;
+	font-style: italic;
 	height: 100vh;
 	margin: 6rem auto 4rem;
 	max-width: 600px;
@@ -109,29 +111,15 @@ h1 {
 }
 
 .why-use p {
-	font-size: 1rem;
-	color: #ccc;
+	font-family: "avenir-lt-pro", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: var(--paragraph-font-size);
+	color: var(--text-color);
 }
 
 footer {
-	font-size: 1rem;
+	font-size: var(--paragraph-font-size);
 	opacity: 0.6;
 	margin-top: 4rem;
-}
-
-/* --- Make card-container horizontally scrollable on smaller screens --- */
-@media (max-width: 700px) {
-	.card-container {
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
-		gap: 1rem;
-		justify-content: flex-start;
-		padding: 0 1rem;
-		scroll-snap-type: x mandatory;
-	}
-
-	#tarot-card {
-		flex: 0 0 auto;
-		scroll-snap-align: center;
-	}
 }
