@@ -1,10 +1,11 @@
 :root {
 	--bg-color: #1e1e1e;
 	--text-color: #FEFADD;
+	/* --text2-color: #cbc8b6; */
 	--card-1-color: #F5C967;
 	--card-2-color: #A4AEFA;
 	--card-3-color: #EA633A;
-	--title-font-size: 2.5rem;
+	--title-font-size: 2rem;
 	--paragraph-font-size: 1.1rem;
 	--margin: 3rem;
 	--padding: 3rem;
@@ -17,14 +18,13 @@
 }
 
 body {
-	font-family: "Avenir", sans-serif;
 	background: var(--bg-color);
 	color: var(--text-color);
 	text-align: center;
 	padding: var(--padding);
 }
 
-.hero {
+.main {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -33,20 +33,26 @@ body {
 }
 
 h1 {
+	font-family: "kepler-std", serif;
+	font-weight: 300;
+	font-style: italic;
 	font-size: var(--title-font-size);
 	margin-bottom: 0.5rem;
 }
 
 .subheading {
+	font-family: "avenir-lt-pro", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 	font-size: 1.2rem;
-	color: var(--card-2-color);
+	color: var(--text-color);
 	margin-bottom: 2rem;
 }
 
 .card-container {
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+	flex-wrap:nowrap;
 	gap: 2rem;
 }
 
@@ -102,7 +108,7 @@ h1 {
 }
 
 footer {
-	font-size: 0.85rem;
+	font-size: 1rem;
 	opacity: 0.6;
 	margin-top: 4rem;
 }
