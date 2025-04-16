@@ -1,3 +1,4 @@
+// Parts of the code were learnt from - https://codepen.io/hisivasankar/pen/yWZbPJ 
 // Get elements from the page
 const coin = document.getElementById("coin");
 const flipButton = document.getElementById("flipButton");
@@ -38,9 +39,9 @@ flipButton.addEventListener("click", function() {
 	let rotationAmount;
 	
 	if (isHeads === true) {
-		rotationAmount = 1800; // 5 full spins
+		rotationAmount = 1800; // 5 spins
 	} else {
-		rotationAmount = 1980; // 5.5 full spins
+		rotationAmount = 1980; // 5.5 spins
 	}
 	
 	// Apply the rotation to the coin

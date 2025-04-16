@@ -7,14 +7,52 @@
 	<link href="assets/reset.css" rel="stylesheet">
 	<link href="timer.css" rel="stylesheet">
 	<script defer src="timerscript.js"></script>
+	<script>
+		(function(d) {
+		  var config = {
+			kitId: 'vey0tns',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	  </script>
+	  <script>
+		(function(d) {
+		  var config = {
+			kitId: 'vey0tns',
+			scriptTimeout: 3000,
+			async: true
+		  },
+		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
 </head>
 <body>
+	<header>
+		<div class="logo-bar">
+			<span class="block block-yellow"></span>
+			<span class="block block-purple">*</span>
+			<span class="block block-orange"></span>
+		</div>
+	</header>
 	<div class="container">
-		<h1>Decision Timer ⏳</h1>
-		<label for="timeSlider">Set your decision time:</label>
-		<input type="range" id="timeSlider" min="30" max="1200" step="30" value="60">
-		<div id="timeValue">1 minute</div>
-		<button id="startButton">Start Timer</button>
+		<h1>Decision Timer</h1>
+		<form id="timerForm">
+			<label for="dilemma">What is your dilemma?</label>
+			<input type="text" id="dilemma" placeholder="e.g. What to eat?" required>
+			
+			<label for="timeSelect">How much time do you need to decide?</label>
+			<select id="timeSelect">
+				<option value="30">30 seconds</option>
+				<option value="60">1 minute</option>
+				<option value="120">2 minutes</option>
+				<option value="300">5 minutes</option>
+				<option value="600">10 minutes</option>
+				<option value="1200">20 minutes</option>
+			</select>
+			<button type="submit" class="primary-button">Start Timer</button>
+		</form>
 		<div id="timerDisplay">00:00</div>
 		<div id="resultMessage"></div>
 	</div>
