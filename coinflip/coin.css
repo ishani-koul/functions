@@ -2,7 +2,6 @@
 	--coin-size: 200px;
 	--color-front: #B18EFF;
 	--color-back: #D16330;
-	--text-color: #000;
 	--bg: #1e1e1e;
 	--primary: #e0e0e0;
 	--radius: 50%;
@@ -30,57 +29,59 @@ h1 {
 	gap: 1rem;
 	align-items: center;
 	margin-bottom: 2.5rem;
-  }
-  
-  input {
+}
+
+input {
 	font-family: "avenir-lt-pro", sans-serif;
 	background: transparent;
 	border: none;
-	border-bottom: 2px solid #B18EFF;
-	color: #F3C7B2;
+	border-bottom: 2px solid #e0e0e0;
+	/* color: #F3C7B2; */
 	padding: 0.7rem 0;
 	font-size: 1rem;
 	width: 280px;
 	text-align: center;
 	outline: none;
-  }
-  
-  input::placeholder {
-	color: #888;
+	color: none;
+}
+
+input::placeholder {
+	color: #878787;
 	opacity: 0.6;
-  }
-  
-  input:focus {
+}
+
+input:focus {
 	border-bottom-color: #D16330;
-  }
+}
 
 
-  button {
+button {
 	margin-top: 1rem;
 	font-family: "avenir-lt-pro", sans-serif;
-	background-color: #B18EFF;
+	background-color: #e0e0e0;
 	color: #1e1e1e;
 	border: none;
 	padding: 12px 32px;
 	font-size: 1rem;
 	cursor: pointer;
-	border-radius: 10px;
+	border-radius: 4px;
 	transition: background 0.3s ease;
-  }
-  
-  button:hover {
-	background-color: #D16330;
-	color: #fff;
-  }
+}
 
-  .coin-container {
+button:hover {
+	background-color: #1e1e1e;
+	border-radius: 1px solid #e0e0e0;
+	color: #e0e0e0;
+}
+
+.coin-container {
 	margin-top: 2rem;
 	perspective: 1000px;
 	height: var(--coin-size);
 	width: var(--coin-size);
 	margin-left: auto;
 	margin-right: auto;
-  }
+}
 
 .coin {
 	width: var(--coin-size);
@@ -117,8 +118,8 @@ h1 {
 	font-weight: 400;
 	background-color: var(--color-front);
 	transform: rotateY(0deg);
-	color: var(--text-color);
-	font-size: 1.3rem;
+	color: var(--primary);
+	font-size: 1.5rem;
 }
 
 .back {
@@ -126,6 +127,6 @@ h1 {
 	font-weight: 400;
 	background-color: var(--color-back);
 	transform: rotateY(180deg);
-	color: var(--text-color);
-	font-size: 1.3rem;
+	color: var(--primary);
+	font-size: 1.5rem;
 }

@@ -14,50 +14,33 @@
 		  },
 		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 		})(document);
-	  </script>
-	  <script>
-		(function(d) {
-		  var config = {
-			kitId: 'vey0tns',
-			scriptTimeout: 3000,
-			async: true
-		  },
-		  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-		})(document);
-	  </script>
+	</script>
 </head>
 <body>
-	<header>
-		<h1>Let the Universe Decide</h1>
-		<p class="intro">
-		Welcome! This space is here to guide your indecision — quickly, playfully, and without the burden of overthinking. 
-		</p>
-	</header>
+	<section class="hero">
+		<h1>Let the universe decide</h1>
+		<p class="subheading">Pick a card – any card</p>
 
-	<main class="card-container">
-		<!-- Card 1 -->
-		<div class="tarot-card">
-			<a href="randomdecision/common.html">
-				<h2>🃏 Let the Universe Decide</h2>
-				<p>Enter up to three options, and the universe will choose one for you.</p>
+		<div class="card-container">
+			<a href="randomdecision/common.html" class="tarot-card1" id="tarot-card">
+				<span class="symbol">🔮</span>
+			</a>
+			<a href="timer/timer.html" class="tarot-card2" id="tarot-card">
+				<span class="symbol">⏳</span>
+			</a>
+			<a href="coinflip/coin.html" class="tarot-card3" id="tarot-card">
+				<span class="symbol">🪙</span>
 			</a>
 		</div>
+	</section>
 
-		<!-- Card 2 -->
-		<div class="tarot-card">
-			<a href="timer/timer.html">
-				<h2>⏳ Decision Timer</h2>
-				<p>You have <em>x</em> minutes. Choose wisely — or face the truth of how much of your life is spent making choices.</p>
-			</a>
-		</div>
+	<section class="why-use">
+		<h2>Why use this?</h2>
+		<p>Because sometimes your brain buffer is full and flipping a digital coin feels oddly profound.</p>
+	</section>
 
-		<!-- Card 3 -->
-		<div class="tarot-card">
-			<a href="coinflip/coin.html">
-				<h2>🪙 Fate’s Coin Flip</h2>
-				<p>Need a Yes or No? Flip the cosmic coin and embrace the thrill of chance.</p>
-			</a>
-		</div>
-	</main>
+	<footer>
+		<p>Made with stardust ✨ by Ishani Koul</p>
+	</footer>
 </body>
 </html>
