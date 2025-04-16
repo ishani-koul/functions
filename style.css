@@ -7,8 +7,8 @@
 	--card-3-color: #EA633A;
 	--title-font-size: 2rem;
 	--paragraph-font-size: 1.2rem;
-	--margin: 3rem;
-	--padding: 3rem;
+	--margin: 1rem;
+	--padding: 1rem;
 }
 
 * {
@@ -110,9 +110,23 @@ h1 {
 	padding: 0 1rem;
 }
 
-.why-use h2 {
+/* .why-use h2 {
 	font-size: 1.8rem;
 	margin-bottom: 1rem;
+} */
+.why-use h1 {
+	font-family: "kepler-std", serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size:calc(var(--title-font-size)*2.1);
+	padding-bottom: 1rem;
+}
+
+.gradient-text {
+	background: linear-gradient(90deg, #F5C967, #A4AEFA, #EA633A);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
 }
 
 .why-use p {
