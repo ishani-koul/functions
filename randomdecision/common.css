@@ -28,9 +28,9 @@ body {
 	gap: 0.5rem;
 	margin-bottom: 4rem;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #F5C967;
-	margin-right: -2rem;
-	margin-left: -2rem;
+	border-bottom: 1px solid var(--card-1-color);
+	margin-left: -1.4rem;
+	margin-right: -1.4rem;
 }
 
 .block {
@@ -38,6 +38,7 @@ body {
 	height: 30px;
 	display: inline-block;
 	border-radius: 2px;
+	font-size: 1.5rem;
 }
 
 .block-yellow { background: var(--card-1-color); }
@@ -67,25 +68,42 @@ form {
 label {
 	font-family: "avenir-lt-pro", sans-serif;
 	font-weight: 400;
-	font-style: normal;
 	font-size: 1rem;
-	color: var(--text-color);
 	margin-bottom: 0.4rem;
 }
 
 input {
 	background: transparent;
 	border: 1px solid var(--text-color);
-	padding: 0.6rem;
+	padding: 0.7rem;
 	color: var(--text-color);
 	font-size: 1rem;
 	border-radius: 4px;
+}
+
+#dilemma {
 	margin-bottom: 2rem;
 }
 
 input::placeholder {
 	color: #7c7b73;
 }
+
+#option1 {
+	margin-bottom: 0.5rem;
+}
+
+.option-input {
+	width: 100%;
+	background: transparent;
+	border: 1px solid var(--text-color);
+	padding: 0.7rem;
+	color: var(--text-color);
+	font-size: 1rem;
+	border-radius: 4px;
+	margin-top: 0.5rem;
+}
+
 
 .link-button {
 	background: none;
@@ -95,10 +113,7 @@ input::placeholder {
 	font-size: 1rem;
 	cursor: pointer;
 	text-decoration: underline;
-}
-
-.link-button:hover {
-	text-decoration: underline;
+	margin-top: 2rem;
 }
 
 .primary-button {
@@ -112,51 +127,51 @@ input::placeholder {
 	cursor: pointer;
 }
 
-/* Modal */
+/* Modal styling */
 .modal {
 	position: fixed;
 	inset: 0;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0, 0, 0, 0.7);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 10;
 }
-  
-  .modal-content {
-	background: var(--accent);
-	padding: 2.5rem 1.5rem;
-	border-radius: 8px;
+
+.modal-content {
+	background: var(--card-1-color);
+	color: var(--bg-color);
+	padding: 2rem;
+	border-radius: 4px;
 	text-align: center;
+	width: 90%;
 	max-width: 320px;
-  }
-  
-  .modal-subtitle {
-	font-family: var(--font-serif);
+}
+
+.modal-sub {
+	font-family: "kepler-std", serif;
 	font-style: italic;
 	font-size: 1.2rem;
-	margin-bottom: 0.5rem;
-	color: #1e1e1e;
-  }
-  
-  .modal-result {
-	font-family: var(--font-serif);
-	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.modal-result {
+	font-family: "kepler-std", serif;
 	font-weight: bold;
-	color: #1e1e1e;
+	font-size: 2rem;
 	margin-bottom: 1.5rem;
-  }
-  
-  .modal-content button {
+}
+
+.modal-content button {
+	border: 1px solid var(--bg-color);
 	background: none;
-	border: 1px solid #1e1e1e;
-	padding: 0.7rem 1rem;
-	border-radius: 6px;
+	padding: 0.7rem 1.2rem;
+	color: var(--bg-color);
+	border-radius: 4px;
 	cursor: pointer;
-	font-weight: 500;
-	font-size: 0.95rem;
-  }
-  
-  .hidden {
+	font-size: 1rem;
+}
+
+.hidden {
 	display: none;
-  }
-  
+}

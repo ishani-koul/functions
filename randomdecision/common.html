@@ -30,7 +30,7 @@
 <body>
 	<header>
 		<div class="logo-bar">
-			<span class="block block-yellow"></span>
+			<span class="block block-yellow">*</span>
 			<span class="block block-purple"></span>
 			<span class="block block-orange"></span>
 		</div>
@@ -42,10 +42,8 @@
 			<label for="dilemma">What is your dilemma?</label>
 			<input type="text" id="dilemma" placeholder="e.g. What to eat?" required>
 
-			<label for="option1">Option 1</label>
+			<label for="options">Options</label>
 			<input type="text" id="option1" placeholder="Enter option 1" required>
-
-			<label for="option2">Option 2</label>
 			<input type="text" id="option2" placeholder="Enter option 2" required>
 
 			<div id="additionalOpt"></div>
@@ -57,8 +55,8 @@
 
 	<div class="modal hidden" id="resultModal">
 		<div class="modal-content">
-			<p class="modal-subtitle">The universe decided</p>
-			<h2 class="modal-result" id="decisionOutput">Sushi</h2>
+			<p class="modal-sub">The universe decided</p>
+			<h2 class="modal-result" id="result">Sushi</h2>
 			<button id="closeModal">Great, thanks!</button>
 		</div>
 	</div>
