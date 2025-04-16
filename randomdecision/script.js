@@ -59,13 +59,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		decisionOutput.textContent = selectedOption;
 		}
 	
-		// Show the result modal
-		modal.classList.remove('hidden');
+		
+		modal.showModal();
 	});
-  
-	// When the "Close" button on the modal is clicked
+
+	// Handle modal close
 	closeModalButton.addEventListener('click', function () {
-		// Hide the modal again
-		modal.classList.add('hidden');
+		modal.close();
 	});
-	});
+});
