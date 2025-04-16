@@ -27,7 +27,7 @@ body {
 }
 
 .main {
-	min-height: 100vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -54,14 +54,16 @@ h1 {
 .card-container {
 	display: flex;
 	justify-content: center;
-	flex-wrap:nowrap;
-	gap: 2rem;
+	gap: 1rem;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 #tarot-card {
-	width: 160px;
+	width: 60vw;
+	max-width: 150px;
 	height: 220px;
-	border-radius: 12px;
+	border-radius: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -69,6 +71,7 @@ h1 {
 	transition: transform 0.3s ease;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
+
 
 .tarot-card:hover {
 	transform: translateY(-10px);
@@ -94,6 +97,7 @@ h1 {
 }
 
 .why-use {
+	height: 100vh;
 	margin: 6rem auto 4rem;
 	max-width: 600px;
 	padding: 0 1rem;
