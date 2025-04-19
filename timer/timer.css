@@ -83,7 +83,6 @@ h2 {
 	font-weight: bold;
 	margin: 2.5rem auto;
 	padding: 4rem 6.5rem;
-	/* border: 1px solid var(--text-color); */
 	border-radius: 8px;
 	width: max-content;
 	background-color: rgba(255, 255, 255, 0.05);
@@ -170,3 +169,12 @@ select option {
 	min-height: 80px; 
 	max-width: fit-content;
 }
+
+.sticky-button-wrapper {
+	position: sticky;
+	bottom: 1rem;
+	background: var(--bg-color);
+	padding: 1rem 0;
+	z-index: 10;
+}
+
