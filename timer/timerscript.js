@@ -1,51 +1,56 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.getElementById("timerForm");
-	const select = document.getElementById("timeSelect");
+	const timeDropdown = document.getElementById("timeSelect");
 	const dilemmaInput = document.getElementById("dilemma");
-	const timerDisplay = document.getElementById("timerDisplay");
-	const result = document.getElementById("resultMessage");
+	const timerBox = document.getElementById("timerDisplay");
 
-	let countdown; // Timer interval
-	let totalSeconds; // Total time in seconds
+	let countdown; // this will store the setInterval
+	let totalTime; // how much time user chose
 
 	form.addEventListener("submit", function (event) {
-		event.preventDefault(); // Prevent page refresh on submit
+		event.preventDefault(); // stop the page from refreshing
 
-		result.textContent = ""; // Clear old result
-		totalSeconds = parseInt(select.value);
-		let secondsLeft = totalSeconds;
-  
-		updateTimerDisplay(secondsLeft);
-		clearInterval(countdown); // Clear any existing timer
+		clearInterval(countdown); // stop any previous timer
+		timerBox.innerText = ""; // clear anything that was there
+
+		totalTime = parseInt(timeDropdown.value);
+		let timeLeft = totalTime;
+
+		showTime(timeLeft); // show the starting time
 
 		countdown = setInterval(function () {
-		secondsLeft--;
+			timeLeft--;
+			showTime(timeLeft);
 
-		updateTimerDisplay(secondsLeft);
-
-		if (secondsLeft <= 0) {
-			clearInterval(countdown);
-			showResult(totalSeconds, dilemmaInput.value);
-		}
-	}, 1000);
+			if (timeLeft <= 0) {
+				clearInterval(countdown);
+				showResult(totalTime, dilemmaInput.value);
+			}
+		}, 1000);
 	});
 
-	// Format timer display in mm:ss
-	function updateTimerDisplay(seconds) {
-		const minutes = Math.floor(seconds / 60);
-		const secs = seconds % 60;
-		timerDisplay.textContent = pad(minutes) + ":" + pad(secs);
+	function showTime(seconds) {
+		let mins = Math.floor(seconds / 60);
+		let secs = seconds % 60;
+
+		timerBox.innerText = format(mins) + ":" + format(secs);
 	}
 
-	// Show result message after time is up
-	function showResult(secondsUsed, dilemmaText) {
-		const secondsInDay = 86400;
-		const percent = ((secondsUsed / secondsInDay) * 100).toFixed(3);
-		result.innerHTML = `⏰ You spent <strong>${percent}%</strong> of your day deciding <em>“${dilemmaText}”</em>.`;
+	function showResult(timeSpent, dilemma) {
+		let totalSecondsInDay = 86400;
+		let percentUsed = ((timeSpent / totalSecondsInDay) * 100).toFixed(3);
+	
+		timerBox.classList.add("result-on"); // For styling
+	
+		timerBox.innerHTML = `
+			<span>
+				⏳ <br> You just spent <strong>${percentUsed}%</strong> of your day deciding<br>
+				<em>“${dilemma}”</em>.
+			</span>
+		`;
 	}
 
-	// Pad numbers less than 10 with a zero
-	function pad(num) {
-		return num < 10 ? "0" + num : num;
+	function format(number) {
+		return number < 10 ? "0" + number : number;
 	}
-	});
+});
