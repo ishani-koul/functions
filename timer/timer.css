@@ -160,7 +160,7 @@ select option {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 	padding-bottom: 3rem;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-weight: normal;
 	line-height: 1.5;
 	display: flex;
@@ -168,4 +168,5 @@ select option {
 	align-items: center;
 	text-align: center;
 	min-height: 80px; 
+	max-width: fit-content;
 }

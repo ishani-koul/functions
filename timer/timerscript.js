@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 		timerBox.innerHTML = `
 			<span>
-				⏳ <br> You just spent <strong>${percentUsed}%</strong> of your day deciding<br>
+				⏳ <br> You just spent <strong>${percentUsed}%</strong> of your day deciding
 				<em>“${dilemma}”</em>.
 			</span>
 		`;
