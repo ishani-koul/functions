@@ -83,10 +83,10 @@ h2 {
 	font-weight: bold;
 	margin: 2.5rem auto;
 	padding: 4rem 7rem;
-	border: 1px solid var(--text-color);
+	/* border: 1px solid var(--text-color); */
 	border-radius: 8px;
 	width: max-content;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.05);
 }
 
 form {
@@ -135,17 +135,17 @@ select option {
 }
 
 #timerDisplay {
-	font-family: "kepler-std", serif;
+	font-family: 'Courier New', monospace;
 	font-size: 2.4rem;
-	font-weight: bold;
+	font-weight:bold;
 	margin-top: 2rem;
 	text-align: center;
-	min-height: 80px; /* allows for multiline */
+	min-height: 80px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* padding: 1rem; */
 	line-height: 1.2;
+	color: #A4AEFA;
 }
 
 #resultMessage {
