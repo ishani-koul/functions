@@ -2,9 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var form = document.getElementById('dilemmaForm');
 	var addOptionButton = document.getElementById('addOptionButton');
 	var additionalOptionsContainer = document.getElementById('additionalOpt');
-	var modal = document.getElementById('resultModal');
-	var decisionOutput = document.getElementById('result');
-	var closeModalButton = document.getElementById('closeModal');
+	var resultBox = document.getElementById('resultDisplay');
 
 	// 2 options 
 	var optionCount = 2;
@@ -49,22 +47,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// If no options were added, show a message
 		if (options.length === 0) {
-			decisionOutput.textContent = 'Nothing to choose!';
+			resultBox.textContent = 'Nothing to choose!';
 		} else {
 		// Pick one random option
 		var randomIndex = Math.floor(Math.random() * options.length);
 		var selectedOption = options[randomIndex];
 		
 		// Show the selected result
-		decisionOutput.textContent = selectedOption;
+		resultBox.textContent = selectedOption;
+		resultBox.classList.add('result-on');
 		}
-	
-		
-		modal.showModal();
-	});
-
-	// Handle modal close
-	closeModalButton.addEventListener('click', function () {
-		modal.close();
 	});
 });

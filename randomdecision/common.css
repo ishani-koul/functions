@@ -22,15 +22,21 @@ body {
 	text-align: center;
 }
 
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
 .logo-bar {
 	display: flex;
 	justify-content: center;
 	gap: 0rem;
-	margin-bottom: 4rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid var(--text-color);
-	margin-left: -1.4rem;
-	margin-right: -1.4rem;
 }
 
 .block {
@@ -40,17 +46,18 @@ body {
 	border-radius: 2px;
 }
 
-.block-yellow { 
+.block-yellow {
 	background: var(--card-1-color);
 	transform: rotate(-10deg);
- }
+}
 
-.block-purple { 
-	background: var(--card-2-color); 
+.block-purple {
+	background: var(--card-2-color);
 	transform: rotate(5deg);
 }
-.block-orange { 
-	background: var(--card-3-color); 
+
+.block-orange {
+	background: var(--card-3-color);
 	transform: rotate(-10deg);
 }
 
@@ -58,6 +65,11 @@ body {
 	max-width: 420px;
 	margin: 0 auto;
 	text-align: left;
+	/* /NEW */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 h1 {
@@ -65,8 +77,17 @@ h1 {
 	font-weight: 300;
 	font-style: italic;
 	font-size: var(--title-font-size);
-	margin-bottom: 2rem;
+	margin-bottom: 0rem;
 	text-align: center;
+}
+
+h2 {
+	font-family: "avenir-lt-pro", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	margin-bottom: 0.4rem;
+	text-align: center;
+	opacity: 0.6;
 }
 
 form {
@@ -79,40 +100,38 @@ label {
 	font-weight: 400;
 	font-size: 1rem;
 	margin-bottom: 0.4rem;
+	text-align: left;
 }
 
-input {
+input,
+select {
 	background: transparent;
 	border: 1px solid var(--text-color);
-	padding: 0.7rem;
+	padding: 0.7rem 1.2rem 0.7rem 0.7rem;
 	color: var(--text-color);
 	font-size: 1rem;
 	border-radius: 4px;
-}
-
-#dilemma {
-	margin-bottom: 2rem;
+	margin-bottom: 0.5rem;
+	width: 100%;
 }
 
 input::placeholder {
 	color: #7c7b73;
 }
 
-#option1 {
-	margin-bottom: 0.5rem;
-}
-
-.option-input {
-	width: 100%;
-	background: transparent;
-	border: 1px solid var(--text-color);
-	padding: 0.7rem;
-	color: var(--text-color);
-	font-size: 1rem;
-	border-radius: 4px;
+/* .option-input {
 	margin-top: 0.5rem;
-}
+} */
 
+.primary-button {
+	background-color: var(--card-1-color);
+	color: var(--bg-color);
+	font-size: 1rem;
+	padding: 1rem 7rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
 
 .link-button {
 	background: none;
@@ -122,24 +141,44 @@ input::placeholder {
 	font-size: 1rem;
 	cursor: pointer;
 	text-decoration: underline;
-	margin-top: 2rem;
+	margin-top: 0.5rem;
 }
 
-.primary-button {
-	background-color: var(--card-1-color);
-	color: var(--bg-color);
-	font-size: 1rem;
-	padding: 1rem;
-	padding-left: 7rem;
-	padding-right: 7rem;
-	padding-top: 1rem;
-	padding-bottom: 1rem; 
-	border: none;
-	border-radius: 4px;
-	/* margin-top: 5rem; */
-	cursor: pointer;
+/* Sticky button area */
+.sticky-button-wrapper {
+	position: sticky;
+	bottom: 0;
+	background: var(--bg-color);
+	padding: 1rem 0;
+	z-index: 10;
+	text-align: center;
 }
 
+/* RESULT */
+#resultDisplay {
+	font-family: 'Courier New', monospace;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin: 2rem auto;
+	text-align: center;
+	min-height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.2;
+	color: #A4AEFA;
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: 8px;
+	padding: 2rem 4rem;
+}
+
+#resultDisplay.result-on {
+	padding: 3rem 1.5rem;
+	font-size: 1.1rem;
+	font-weight: normal;
+	line-height: 1.5;
+	text-align: center;
+}
 
 /* Modal styling */
 dialog#resultModal {
@@ -148,11 +187,11 @@ dialog#resultModal {
 	background: transparent;
 	width: 100%;
 	max-width: 340px;
-	margin: auto; /* center horizontally */
+	margin: auto;
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%); /* center v */
+	transform: translate(-50%, -50%);
 	z-index: 10;
 }
 
@@ -201,11 +240,15 @@ dialog::backdrop {
 	font-size: 1rem;
 }
 
-.sticky-button-wrapper {
-	position: sticky;
-	margin-top: 7rem;
-	bottom: 1rem;
-	padding: 1rem 0;
-	background: var(--bg-color);
-	z-index: 10;
+.scroll-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow-y: auto;
 }
+
+.main-container {
+	flex-grow: 1;
+	padding: var(--padding);
+}
+

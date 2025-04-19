@@ -28,6 +28,7 @@
 	</script>
 </head>
 <body>
+	<div class="scroll-wrapper">
 	<header>
 		<a href="../index.html">
 			<div class="logo-bar">
@@ -40,6 +41,10 @@
 
 	<div class="main-container">
 		<h1>Random decision maker</h1>
+		<h2> Let the universe help you make a decision.</h2>
+
+		<div id="resultDisplay" class="result">The universe will speak here</div>
+
 		<form id="dilemmaForm">
 			<label for="dilemma">What is your dilemma?</label>
 			<input type="text" id="dilemma" placeholder="e.g. What to eat?" required>
@@ -57,13 +62,14 @@
 			<button type="submit" id="submitButton" class="primary-button">Decide for me</button>
 		</div> 
 	</div>
+	</div>
 
-	<dialog id="resultModal">
+	<!-- <dialog id="resultModal">
 		<div class="modal-content">
 			<p class="modal-sub">The universe decided</p>
 			<h2 class="modal-result" id="result">Sushi</h2>
-			<button id="closeModal">Great, thanks!</button>
-		</div>
-	</dialog>
+			<button id="closeModal">Great, thanks!</button> -->
+		<!-- </div>
+	</dialog> -->
 </body>
 </html>
