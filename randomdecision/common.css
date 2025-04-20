@@ -5,7 +5,7 @@
 	--card-2-color: #A4AEFA;
 	--card-3-color: #EA633A;
 	--padding: 1.4rem;
-	--title-font-size: 2rem;
+	--title-font-size: 1.5rem;
 	--paragraph-font-size: 1.2rem;
 }
 
@@ -70,6 +70,10 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+#dilemma {
+	margin-bottom: 1.5rem;
 }
 
 h1 {
@@ -251,4 +255,30 @@ dialog::backdrop {
 	flex-grow: 1;
 	padding: var(--padding);
 }
+
+
+form {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.sticky-button-wrapper {
+	position: sticky;
+	bottom: 0;
+	background: var(--bg-color);
+	padding: 1rem 0;
+	text-align: center;
+	z-index: 5;
+	margin-top: 2rem;
+}
+
+#resultDisplay {
+	font-family: 'Courier New', monospace;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	color: var(--card-2-color); /* lavender tone */
+}
+
 

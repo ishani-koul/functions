@@ -4,58 +4,63 @@ document.addEventListener('DOMContentLoaded', function () {
 	var additionalOptionsContainer = document.getElementById('additionalOpt');
 	var resultBox = document.getElementById('resultDisplay');
 
-	// 2 options 
 	var optionCount = 2;
 
-	// Add Option +1 
+	// Add new input field when user clicks "Add option"
 	addOptionButton.addEventListener('click', function () {
-		optionCount = optionCount + 1;
+		optionCount += 1;
 
-	// Create a new input box
 		var newInput = document.createElement('input');
 		newInput.type = 'text';
-		newInput.placeholder = 'Option' + optionCount;
-		newInput.className = 'option-input';
-	
-	// Add it to the form
+		newInput.placeholder = 'Option ' + optionCount;
+		newInput.classList.add('option-input');
+		newInput.required = true;
+
 		additionalOptionsContainer.appendChild(newInput);
 	});
 
-	// When the form is submitted -  No refresh 
+	// Form submission handler
 	form.addEventListener('submit', function (event) {
 		event.preventDefault();
-	
-	// Get the values from the first two input fields
-	var option1 = document.getElementById('option1').value;
-	var option2 = document.getElementById('option2').value;
-	
-	// Create a list of all options
-	var options = [option1, option2];
-	
-	// Get any extra input fields that were added
-	var extraInputs = document.querySelectorAll('.option-input');
-	
-	// Pass through each value and see what is a valid value
-	for (var i = 0; i < extraInputs.length; i++) {
-		var inputValue = extraInputs[i].value;
-	
-		// if Not empty 
-		if (inputValue.trim() !== '') {
-			options.push(inputValue);
-		}
-	}
 
-		// If no options were added, show a message
+		resultBox.textContent = '';
+		resultBox.classList.remove('result-on');
+
+		var options = [];
+
+		var option1 = document.getElementById('option1').value.trim();
+		var option2 = document.getElementById('option2').value.trim();
+
+		if (option1) options.push(option1);
+		if (option2) options.push(option2);
+
+		var extraInputs = document.querySelectorAll('.option-input');
+		extraInputs.forEach(function (input) {
+			var val = input.value.trim();
+			if (val) options.push(val);
+		});
+
 		if (options.length === 0) {
 			resultBox.textContent = 'Nothing to choose!';
-		} else {
-		// Pick one random option
-		var randomIndex = Math.floor(Math.random() * options.length);
-		var selectedOption = options[randomIndex];
-		
-		// Show the selected result
-		resultBox.textContent = selectedOption;
-		resultBox.classList.add('result-on');
+			return;
 		}
+
+		// Blinking dots animation
+		let dotCount = 0;
+		resultBox.textContent = "The universe is thinking";
+		const loadingInterval = setInterval(() => {
+			dotCount = (dotCount + 1) % 4;
+			resultBox.textContent = "The universe is thinking" + ".".repeat(dotCount);
+		}, 500);
+
+		// After delay, stop loading and show result
+		setTimeout(() => {
+			clearInterval(loadingInterval);
+
+			var selected = options[Math.floor(Math.random() * options.length)];
+			var fullSentence = `The universe has decided: ${selected}`;
+			resultBox.textContent = fullSentence;
+			resultBox.classList.add('result-on');
+		}, 2500); // Adjust delay here (in ms)
 	});
 });

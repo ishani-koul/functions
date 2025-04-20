@@ -48,19 +48,20 @@
 		<form id="dilemmaForm">
 			<label for="dilemma">What is your dilemma?</label>
 			<input type="text" id="dilemma" placeholder="e.g. What to eat?" required>
-
+		
 			<label for="options">Options</label>
 			<input type="text" id="option1" placeholder="Enter option 1" required>
 			<input type="text" id="option2" placeholder="Enter option 2" required>
-
+		
 			<div id="additionalOpt"></div>
-
+		
 			<button type="button" id="addOptionButton" class="link-button">Add option</button>
-			<!-- <button type="submit" id="submitButton" class="primary-button">Decide for me</button> -->
+		
+			<!-- ✅ Sticky submit button inside the form -->
+			<div class="sticky-button-wrapper">
+				<button type="submit" id="submitButton" class="primary-button">Decide for me</button>
+			</div>
 		</form>
-		<div class="sticky-button-wrapper">
-			<button type="submit" id="submitButton" class="primary-button">Decide for me</button>
-		</div> 
 	</div>
 	</div>
 
