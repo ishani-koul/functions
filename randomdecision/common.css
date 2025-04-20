@@ -162,7 +162,7 @@ input::placeholder {
 #resultDisplay {
 	font-family: 'Courier New', monospace;
 	font-size: 1.2rem;
-	font-weight: bold;
+	font-weight: normal;
 	margin: 2rem auto;
 	text-align: center;
 	min-height: 80px;
@@ -176,15 +176,14 @@ input::placeholder {
 	padding: 2rem 4rem;
 }
 
-#resultDisplay.result-on {
-	padding: 3rem 1.5rem;
-	font-size: 1.1rem;
+/* #resultDisplay.result-on {
+	padding: 2rem 4rem;
+	font-size: 1.2rem;
 	font-weight: normal;
-	line-height: 1.5;
 	text-align: center;
-}
+} */
 
-/* Modal styling */
+/* Modal styling
 dialog#resultModal {
 	border: none;
 	padding: 0;
@@ -242,7 +241,7 @@ dialog::backdrop {
 	border-radius: 4px;
 	cursor: pointer;
 	font-size: 1rem;
-}
+} */
 
 .scroll-wrapper {
 	display: flex;
@@ -273,12 +272,10 @@ form {
 	margin-top: 2rem;
 }
 
-#resultDisplay {
+/* #resultDisplay {
 	font-family: 'Courier New', monospace;
 	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
-	color: var(--card-2-color); /* lavender tone */
-}
-
-
+	color: var(--card-2-color); /* lavender tone 
+} */
