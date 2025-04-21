@@ -78,7 +78,7 @@ html, body {
 h1 {
 	font-size: 1.4rem;
 	font-family: var(--font-family);
-	font-weight: 300;
+	font-weight: 400;
 	margin-top: 2rem;
 }
 
@@ -93,8 +93,8 @@ h1 {
 .gradient-text {
 	background: linear-gradient(45deg, 
 	#E29A01 0%,
-	#F26726 40%,
-	#313DE7 95%
+	#F26726 50%,
+	#313DE7 99%
 );
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -210,8 +210,6 @@ h1 {
 }
 
 
-
-
 footer {
 	position: fixed;
 	bottom: 0;
@@ -225,7 +223,7 @@ footer {
 }
 
 footer p {
-	font-family: "avenir-lt-pro", sans-serif;
+	font-family: var(--font-family);
 	font-weight: 400;
 	font-size: 0.9rem;
 	color: #FEFADD;
