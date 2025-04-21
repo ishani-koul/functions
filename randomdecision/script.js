@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		var newInput = document.createElement('input');
 		newInput.type = 'text';
-		newInput.placeholder = 'Option ' + optionCount;
+		newInput.placeholder = 'Enter option ' + optionCount;
 		newInput.classList.add('option-input');
 		newInput.required = true;
 
@@ -61,6 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			var fullSentence = `The universe has decided: ${selected}`;
 			resultBox.textContent = fullSentence;
 			resultBox.classList.add('result-on');
-		}, 2500); // Adjust delay here (in ms)
+		}, 3000); // Adjust delay here (in ms)
 	});
 });
