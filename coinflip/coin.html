@@ -7,27 +7,41 @@
 		<link href="coin.css" rel="stylesheet">
 		<script defer src="coinscript.js"></script>
 	</head>
-<body>
-	<header>
-		<a href="../index.html">
-			<div class="logo-bar">
-				<span class="block block-yellow"></span>
-				<span class="block block-purple"></span>
-				<span class="block block-orange">*</span>
+	<body>
+		<div class="scroll-wrapper">
+			<header>
+				<a href="../index.html">
+					<div class="logo-bar">
+						<span class="block block-yellow">*</span>
+						<span class="block block-purple"></span>
+						<span class="block block-orange"></span>
+					</div>
+				</a>
+			</header>
+
+			<div class="main-container">
+				<h1>Coin-ish Flip</h1>
+				<h2> Honestly, this doesn't need an H2 </h2>
+				
+
+				<div class="coin-display-box">
+					<div class="coin" id="coin">
+						<div class="side front" id="side1">Option 1</div>
+						<div class="side back" id="side2">Option 2</div>
+					</div>
+				</div>
+
+				<div class="form-section">
+					<div class="inputs">
+						<label for="options">What are your options?</label>
+						<input type="text" id="option1" placeholder="Enter Option 1">
+						<input type="text" id="option2" placeholder="Enter Option 2">
+						<div class="sticky-button-wrapper">
+						<button id="flipButton" class="primary-button">Flip the Coin</button>
+					</div>
+					</div>
+				</div>
 			</div>
-		</a>
-	</header>
-	<h1>Coin Flip</h1>
-	<div class="inputs">
-		<input type="text" id="option1" placeholder="Enter Option 1">
-		<input type="text" id="option2" placeholder="Enter Option 2">
-		<button id="flipButton">Flip the Coin</button>
-	</div>
-	<div class="coin-container">
-		<div class="coin" id="coin">
-			<div class="side front" id="side1">Option 1</div>
-			<div class="side back" id="side2">Option 2</div>
 		</div>
-	</div>
-</body>
+	</body>
 </html>
