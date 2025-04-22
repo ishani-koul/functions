@@ -151,35 +151,6 @@ input::placeholder {
 	margin-top: 0.5rem;
 }
 
-/* Sticky button area */
-/* .sticky-button-wrapper {
-	position: sticky;
-	bottom: 0;
-	background: var(--bg-color);
-	z-index: 10;
-	text-align: center;
-	position: sticky;
-	bottom: 0;
-	padding-top: 1rem;
-	text-align: center;
-	margin-top: 2rem;
-} */
-
-/* .primary-button {
-	font-family: var(--font-family);
-	font-weight: 400;
-	width: 100%;
-	background-color: var(--card-1-color);
-	color: var(--text-color);
-	font-size: 1rem;
-	padding: 0.8rem;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	box-sizing: border-box;
-	display: block;
-} */
-
 /* Button */
 .primary-button {
 	font-family: var(--font-family);
