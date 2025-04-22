@@ -18,7 +18,7 @@ flipButton.addEventListener("click", function() {
 	// Make sure both options are filled in
 	if (option1 === "" || option2 === "") {
 		alert("Please enter both options before flipping the coin!");
-	return;
+		return;
 	}
 
 	// Set the text on the coin sides
@@ -34,17 +34,28 @@ flipButton.addEventListener("click", function() {
 	} else {
 		isHeads = false;
 	}
-	
-	// Choose how much the coin should spin
+
 	let rotationAmount;
-	
 	if (isHeads === true) {
 		rotationAmount = 1800; // 5 spins
 	} else {
 		rotationAmount = 1980; // 5.5 spins
 	}
 	
-	// Apply the rotation to the coin
+	// Applying rotation to the coin circle
 	coin.style.transform = "rotateY(" + rotationAmount + "deg)";
-	});
+
+	// Adding background color change after animation is completed
+	setTimeout(() => {
+		const bgColor = isHeads ? "#F26726" : "#F26726";
+		const font = "'Oliver', sans-serif";
+		const fontSize = "1.4rem";
 	
+		const sideToShow = isHeads ? side1 : side2;
+	
+		sideToShow.style.backgroundColor = bgColor;
+		sideToShow.style.fontFamily = font;
+		sideToShow.style.fontSize = fontSize;
+	}, 1990); //After max spins
+	
+});

@@ -111,64 +111,6 @@ h1 {
 	opacity: 0.8;
 }
 
-/* .card-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 0.2rem;
-	padding: var(--padding);
-	width: 100%;
-	flex-wrap: nowrap;
-}
-
-#tarot-card {
-	flex: 1;
-	max-width: 100px;
-	height: 160px;
-	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	transition: transform 0.3s ease;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-	justify-content: space-around;
-}
-
-#tarot-card p {
-	font-family: "avenir-lt-pro", sans-serif;
-	font-weight: 400;
-	font-size: 0.8rem;
-	color: #1e1e1e;
-}
-
-.tarot-card1 {
-	flex: 1;
-	flex-direction: column;
-	justify-content: space-between;
-	background-color: var(--card-1-color);
-}
-
-.tarot-card2 {
-	flex: 1;
-	flex-direction: column;
-	justify-content: space-around;
-	background-color: var(--card-2-color);
-}
-
-.tarot-card3 {
-	flex: 1;
-	flex-direction: column;
-	justify-content: space-around;
-	background-color: var(--card-3-color);
-}
-
-
-.symbol {
-	font-size: 2.5rem;
-	color: var(--text-color);
-} */
-
 /* CARD STYLES */
 .card-container {
 	width: 100%;
