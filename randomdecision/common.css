@@ -306,6 +306,15 @@ footer {
 
 
 @media (min-width: 1200px) {
+
+	h1 {
+		font-size: calc(var(--title-font-size)*1.2);
+	}
+
+	h2 {
+		font-size: calc(var(--label-font-size)*1.2);
+	}
+	
 	.main-container {
 		max-width: 1000px;
 		width: 100%;
