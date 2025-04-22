@@ -300,11 +300,42 @@ footer {
 	}
 }
 
-
-@media (min-width: 1200px) {
-
+/* @media (min-width: 1200px) {
 	.main-container {
 		padding-top: 4rem;
 	}
+} */
 
+
+@media (min-width: 1200px) {
+	.main-container {
+		max-width: 1000px;
+		width: 100%;
+		margin: 0 auto;
+		padding-top: 4rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.content-columns {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		gap: 3rem;
+		width: 100%;
+		margin-top: 4rem;
+	}
+
+	#resultDisplay {
+		width: 100%;
+		max-width: 600px;
+		height: 400px;
+		margin: 0;
+	}
+
+	form {
+		width: 100%;
+		max-width: 500px;
+	}
 }
