@@ -147,18 +147,6 @@ h1 {
 	border-radius: 12px;
 }
 
-/* Add some magic with slight card tilt */
-#tarot-card1 { transform: rotate(-4deg); }
-#tarot-card2 { transform: rotate(3deg); }
-#tarot-card3 { transform: rotate(-2deg); }
-
-/* Optional hover (no zoom) */
-.tarot-card:hover {
-	transform: rotate(0deg);
-	cursor: pointer;
-	z-index: 10;
-}
-
 
 footer {
 	position: fixed;
@@ -180,11 +168,28 @@ footer p {
 	/* opacity: 0.5; */
 }
 
-@keyframes float {
-	0%	{ transform: translateY(0); }
-	100%	{ transform: translateY(0); }
+/* Add some magic with slight card tilt */
+#tarot-card1 { transform: rotate(-4deg); }
+#tarot-card2 { transform: rotate(3deg); }
+#tarot-card3 { transform: rotate(-2deg); }
+
+/* Optional hover (no zoom) */
+.tarot-card:hover {
+	transform: rotate(0deg);
+	cursor: pointer;
+	z-index: 10;
 }
 
-.tarot-card:hover {
-	animation: float 0.5s ease-in-out infinite;
+
+@media (min-width:1200px) {
+
+	@keyframes float {
+		0%	{ transform: translateY(0); }
+		100%	{ transform: translateY(0); }
+	}
+	
+	.tarot-card:hover {
+		animation: float 0.5s ease-in-out infinite;
+	}
+	
 }
