@@ -170,13 +170,14 @@ select option {
 }
 
 
-#timerDisplay.result-on {
-	font-family: 'Oliver', sans-serif;
-	color: var(--card-1-color);
-	font-size: var(--title-font-size);
-	font-weight: bold;
+ #timerDisplay.result-on {
+	font-family: var(--font-family);
+	font-weight: 400;
+	color: var(--text-color);
+	font-size: var(--paragraph-font-size);
+	
 
-}
+} 
 
 /* Button */
 .primary-button {
@@ -221,6 +222,12 @@ select option {
 	width: 100%;
 	max-width: 400px;
 	margin: 0 auto;
+}
+
+.highlighted {
+	font-family: 'Oliver', sans-serif;
+	color: var(--card-2-color); 
+	font-size: var(--title-font-size);
 }
 
 /* Apply the same responsive width to timer and result boxes */
