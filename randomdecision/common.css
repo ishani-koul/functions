@@ -1,13 +1,24 @@
+@font-face {
+	font-family: 'Oliver';
+	src: url('assets/Oliver-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 :root {
 	--bg-color: #1e1e1e;
 	--text-color: #FEFADD;
-	--card-1-color: #F5C967;
-	--card-2-color: #A4AEFA;
-	--card-3-color: #EA633A;
-	--padding: 1.4rem;
-	--title-font-size: 1.4rem;
+	--card-1-color: #E29A01;
+	--card-2-color: #313DE7;
+	--card-3-color: #F26726;
+	--title-font-size: 1.8rem;
 	--paragraph-font-size: 1rem;
 	--label-font-size: 0.875rem;
+	--transition-speed: 2s;
+	--font-family: "Poppins", sans-serif;
+	--margin-padding: 1rem;
+	--padding: 1.4rem;
+	--padding-small: 0.6rem;
 }
 
 * {
@@ -16,28 +27,23 @@
 	padding: 0;
 }
 
-body {
-	background: var(--bg-color);
-	color: var(--text-color);
-	/* padding: var(--padding); */
-	text-align: center;
-}
-
 html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	background: var(--bg-color);
+	color: var(--text-color);
+	text-align: center;
+	overflow: auto;
 }
 
 /* Top Nav */
 .logo-bar {
 	display: flex;
 	justify-content: center;
-	gap: 0rem;
-	margin-top: 1rem;
-	margin-bottom: 0.5rem;
-	padding-bottom: 1rem;
+	margin-top: var(--margin-padding);
+	padding-bottom: var(--margin-padding);
 	border-bottom: 1px solid var(--text-color);
 }
 
@@ -63,35 +69,32 @@ html, body {
 	transform: rotate(-10deg);
 }
 
+
 /* Body */
 .main-container {
 	flex-grow: 1;
 	padding: var(--padding);
+	/* recheck this after fixing button */
 	padding-bottom: 0rem;
-	margin: 0 auto;
 	text-align: left;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
-#dilemma {
-	margin-bottom: 1.5rem;
-}
-
+/* Title */
 h1 {
-	font-family: "kepler-std", serif;
-	font-weight: 300;
+	font-family: 'Oliver', sans-serif;
 	font-size: var(--title-font-size);
 	text-align: center;
+	margin-top: var(--margin-padding);
 }
 
+/* Sub-Title */
 h2 {
-	font-family: "avenir-lt-pro", sans-serif;
+	font-family: var(--font-family);
 	font-weight: 400;
-	font-size: var(--paragraph-font-size);
-	margin-bottom: 0.4rem;
+	font-size: var(--label-font-size);
 	text-align: center;
 	opacity: 0.5;
 }
@@ -102,23 +105,27 @@ form {
 }
 
 label {
-	font-family: "avenir-lt-pro", sans-serif;
-	font-weight: 400;
-	font-size: var(--paragraph-font-size);
-	margin-bottom: 0.4rem;
+	font-family: var(--font-family);
+	font-size: var(--label-font-size);
+	margin-bottom: 0.2rem;
 	text-align: left;
 }
 
 input,
 select {
+	font-family: var(--font-family);
 	max-width:100vw;
 	background: transparent;
 	border: 1px solid var(--text-color);
-	padding: 0.7rem;
+	padding: var(--padding-small);
 	color: var(--text-color);
 	font-size: var(--label-font-size);
 	border-radius: 4px;
-	margin-bottom: 0.5rem;
+	margin-bottom: calc(var(--margin-padding)/2);
+}
+
+#dilemma {
+	margin-bottom: var(--margin-padding);
 }
 
 input,
@@ -133,33 +140,19 @@ input::placeholder {
 	opacity: 0.5;
 }
 
-.primary-button {
-	width: 100%;
-	background-color: var(--card-1-color);
-	color: var(--bg-color);
-	font-size: 1rem;
-	padding: 1rem;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	box-sizing: border-box;
-	display: block;
-}
-
-
 .link-button {
 	background: none;
 	border: none;
 	color: var(--card-1-color);
 	text-align: left;
-	font-size: 1rem;
+	font-size: var(--margin-padding);
 	cursor: pointer;
 	text-decoration: underline;
 	margin-top: 0.5rem;
 }
 
 /* Sticky button area */
-.sticky-button-wrapper {
+/* .sticky-button-wrapper {
 	position: sticky;
 	bottom: 0;
 	background: var(--bg-color);
@@ -168,40 +161,90 @@ input::placeholder {
 	position: sticky;
 	bottom: 0;
 	padding-top: 1rem;
-	padding-bottom: 1.5rem;
 	text-align: center;
 	margin-top: 2rem;
+} */
+
+/* .primary-button {
+	font-family: var(--font-family);
+	font-weight: 400;
+	width: 100%;
+	background-color: var(--card-1-color);
+	color: var(--text-color);
+	font-size: 1rem;
+	padding: 0.8rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	box-sizing: border-box;
+	display: block;
+} */
+
+/* Button */
+.primary-button {
+	font-family: var(--font-family);
+	font-weight: 500;
+	width: 100%;
+	background-color: var(--card-1-color);
+	color: var(--text-color);
+	font-size: var(--label-font-size);
+	padding: calc(var(--padding-small)*1.2);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	box-sizing: border-box;
+	display: block;
+}
+
+/* Sticky button area */
+.sticky-button-wrapper {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: var(--bg-color);
+	z-index: 1000;
+	padding: 1rem;
+	text-align: center;
+	box-shadow: 0 -2px 10px rgba(0,0,0,0.2); 
 }
 
 /* RESULT */
 #resultDisplay {
-	font-family: "kepler-std", serif;
-	font-weight: 300;
-	font-size: var(--title-font-size);
-	font-weight: normal;
-	margin: 2rem auto;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: var(--paragraph-font-size);
+	margin: var(--padding) auto;
+	width: 100%;
+	height: 150px;
+	max-height: none;
+	margin-bottom: 1rem;
+	box-sizing: border-box;
 	text-align: center;
-	min-height: 80px;
+	max-height: none;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	line-height: 1.2;
-	color: var(--card-1-color);
+	color: var(--text-color);
 	background-color: rgba(255, 255, 255, 0.05);
-	border-radius: 8px;
-	padding: 2rem 4rem;
+	border-radius: 4px;
 }
+
 
 .scroll-wrapper {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	overflow-y: auto;
+	padding-bottom: 10rem;
 }
 
+.highlighted-choice {
+	font-family: 'Oliver', sans-serif;
+	color: var(--card-1-color);
+	font-size: var(--title-font-size);
+	font-weight: bold;
 
-form {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-} 
+}

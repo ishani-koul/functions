@@ -12,8 +12,8 @@
 	--card-2-color: #313DE7;
 	--card-3-color: #F26726;
 	--padding: 1.4rem;
-	--title-font-size: 2rem;
-	--paragraph-font-size: 1rem;
+	--title-font-size: 1.8rem;
+	--button-font-size: 1rem;
 	--label-font-size: 0.875rem;
 	--transition-speed: 2s;
 	--font-family: "Poppins", sans-serif;
@@ -94,7 +94,7 @@ h1 {
 h2 {
 	font-family: var(--font-family);
 	font-weight: 400;
-	font-size: var(--paragraph-font-size);
+	font-size: var(--label-font-size);
 	margin-bottom: 0.4rem;
 	text-align: center;
 	opacity: 0.5;
@@ -155,7 +155,7 @@ input::placeholder {
 	z-index: 1000;
 	padding: 1rem;
 	text-align: center;
-	box-shadow: 0 -2px 10px rgba(0,0,0,0.2); /* Optional shadow */
+	box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
 }
 
 .coin-display-box {

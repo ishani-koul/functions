@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// After delay, stop loading and show result
 		setTimeout(() => {
-			clearInterval(loadingInterval);
+		clearInterval(loadingInterval);
 
-			var selected = options[Math.floor(Math.random() * options.length)];
-			var fullSentence = `The universe has decided: ${selected}`;
-			resultBox.textContent = fullSentence;
-			resultBox.classList.add('result-on');
-		}, 3000); // Adjust delay here (in ms)
+		var selected = options[Math.floor(Math.random() * options.length)];
+		var fullSentence = `The universe has decided:<br><span class="highlighted-choice">${selected}</span>`;
+		resultBox.innerHTML = fullSentence; 
+		resultBox.classList.add('result-on');
+		}, 3000); 
 	});
 });
