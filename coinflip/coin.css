@@ -226,6 +226,11 @@ input::placeholder {
 	color: var(--text-color);
 	border: 2px solid #F26726;
 	font-size: var(--paragraph-font-size);
+	padding: 1rem;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	text-align: center;
+	line-height: 1;
 }
 
 .back {
@@ -236,6 +241,11 @@ input::placeholder {
 	color: var(--text-color);
 	border: 2px solid #F26726;
 	font-size: var(--paragraph-font-size);
+	padding: 1rem;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	text-align: center;
+	line-height: 1;
 }
 
 .front, .back {
@@ -243,6 +253,22 @@ input::placeholder {
 		0 4px 8px rgba(0, 0, 0, 0.3),
 		0 8px 16px rgba(0, 0, 0, 0.2),
 		0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+.coin-result {
+	background-color: var(--text-color);
+	font-family: 'Oliver', sans-serif;
+	font-size: 1.4rem;
+	color: var(--card-3-color);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	text-align: center;
+	line-height: 1;
 }
 
 footer {
@@ -388,6 +414,10 @@ footer {
 	
 	.back {
 		font-size: calc(var(--paragraph-font-size)*1.6);
+	}
+
+	.coin-result {
+		font-size: 2.2rem;
 	}
 
 }

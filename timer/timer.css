@@ -226,6 +226,11 @@ select option {
 	font-family: 'Oliver', sans-serif;
 	color: var(--card-2-color); 
 	font-size: var(--title-font-size);
+	padding: 1rem;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	text-align: center;
+	line-height: 1;
 }
 
 footer {

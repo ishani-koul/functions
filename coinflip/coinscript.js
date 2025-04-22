@@ -58,17 +58,9 @@ flipButton.addEventListener("click", function() {
 	// Applying rotation to the coin circle
 	coin.style.transform = "rotateY(" + rotationAmount + "deg)";
 
-	// Adding background color change after animation is completed
 	setTimeout(() => {
-		const bgColor = isHeads ? "#F26726" : "#F26726";
-		const font = "'Oliver', sans-serif";
-		const fontSize = "1.4rem";
-	
 		const sideToShow = isHeads ? side1 : side2;
-	
-		sideToShow.style.backgroundColor = bgColor;
-		sideToShow.style.fontFamily = font;
-		sideToShow.style.fontSize = fontSize;
-	}, 1990); //After max spins
+		sideToShow.classList.add("coin-result");
+	}, 1990);
 	
 });
