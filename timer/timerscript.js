@@ -55,13 +55,16 @@ dilemmaInput.addEventListener("input", toggleButtonState);
 	
 		timerBox.innerHTML = `
 			<span>
-				You just spent <span class="highlighted">${percentUsed}%</span> <br>of your day deciding<br>
-				<span class="highlighted"> ${dilemma}</span>.
+				You just spent <br><span class="highlighted">${percentUsed}%</span> <br>of your day deciding<br>
+				<span class="highlighted"> ${dilemma}</span>
 			</span>
 		`;
+
+		document.getElementById('suggestion').classList.add('show');
 	}
 
 	function format(number) {
 		return number < 10 ? "0" + number : number;
 	}
+
 });
