@@ -359,4 +359,26 @@ footer {
 		width: 100%;
 		max-width: 500px;
 	}
+
+
+	.coin-container {
+		margin-top: 2rem;
+		perspective: 1000px;
+		height: 16rem;
+		width: 16rem;
+	}
+	
+	.coin {
+		width: 12rem;
+		height: 12rem;
+	}
+	
+	.front {
+		font-size: calc(var(--paragraph-font-size)*1.6);
+	}
+	
+	.back {
+		font-size: calc(var(--paragraph-font-size)*1.6);
+	}
+
 }

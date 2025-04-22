@@ -232,6 +232,10 @@ footer {
 	display: none;
 }
 
+.primary-button:disabled {
+	opacity: 0.5;
+	filter: grayscale(1);
+}
 
 @media (min-width:400px) {
 	
@@ -329,10 +333,19 @@ footer {
 		max-width: 600px;
 		height: 400px;
 		margin: 0;
+		font-size: calc(var(--title-font-size)*1.4);
 	}
 
 	form {
 		width: 100%;
 		max-width: 500px;
 	}
+	
+	
+	 #timerDisplay.result-on {
+		font-family: var(--font-family);
+		font-weight: 400;
+		color: var(--text-color);
+		font-size: calc(var(--paragraph-font-size)*2);
+	} 
 }

@@ -4,6 +4,31 @@ document.addEventListener('DOMContentLoaded', function () {
 	var additionalOptionsContainer = document.getElementById('additionalOpt');
 	var resultBox = document.getElementById('resultDisplay');
 
+	const submitButton = document.getElementById('submitButton');
+const dilemmaInput = document.getElementById('dilemma');
+const option1Input = document.getElementById('option1');
+const option2Input = document.getElementById('option2');
+
+// Disable on load
+submitButton.disabled = true;
+
+// Function to check if inputs are filled
+function toggleSubmitState() {
+	const hasDilemma = dilemmaInput.value.trim().length > 0;
+	const hasOption1 = option1Input.value.trim().length > 0;
+	const hasOption2 = option2Input.value.trim().length > 0;
+	submitButton.disabled = !(hasDilemma && hasOption1 && hasOption2);
+}
+
+// Listen for changes
+dilemmaInput.addEventListener("input", toggleSubmitState);
+option1Input.addEventListener("input", toggleSubmitState);
+option2Input.addEventListener("input", toggleSubmitState);
+
+// Optional: Re-check if inputs are autofilled or pre-filled on page load
+toggleSubmitState();
+
+
 	var optionCount = 2;
 
 	// Add new input field when user clicks "Add option"

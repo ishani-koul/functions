@@ -222,13 +222,11 @@ footer {
 	display: none;
 }
 
-/* .main-scroll-desktop {
-	display: none;
+.primary-button:disabled {
+	opacity: 0.5;
+	filter: grayscale(1);
 }
 
-.scroll-wrapper-desktop {
-	display: none;
-} */
 
 @media (min-width:400px) {
 	
@@ -338,4 +336,15 @@ footer {
 		width: 100%;
 		max-width: 500px;
 	}
+
+	#resultDisplay {
+		font-size: calc(var(--paragraph-font-size)*1.4);
+	}
+
+	.highlighted-choice {
+		margin-top: 0.5rem;
+		font-size: calc(var(--title-font-size)*1.6);
+	}
+
+
 }

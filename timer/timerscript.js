@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	const dilemmaInput = document.getElementById("dilemma");
 	const timerBox = document.getElementById("timerDisplay");
 
+	const submitButton = document.getElementById("submitButton");
+submitButton.disabled = true; 
+
+function toggleButtonState() {
+	const hasDilemma = dilemmaInput.value.trim().length > 0;
+	submitButton.disabled = !hasDilemma;
+}
+
+dilemmaInput.addEventListener("input", toggleButtonState);
+
+
 	let countdown; // this will store the setInterval
 	let totalTime; // how much time user chose
 
