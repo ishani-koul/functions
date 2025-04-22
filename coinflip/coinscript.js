@@ -6,6 +6,19 @@ const side1 = document.getElementById("side1");
 const side2 = document.getElementById("side2");
 const flipSound = document.getElementById("flipSound");
 
+// Disable the button initially
+flipButton.disabled = true;
+
+// Listen for typing in either input
+document.getElementById("option1").addEventListener("input", checkInputs);
+document.getElementById("option2").addEventListener("input", checkInputs);
+
+function checkInputs() {
+	const val1 = document.getElementById("option1").value.trim();
+	const val2 = document.getElementById("option2").value.trim();
+	flipButton.disabled = !(val1 && val2);
+}
+
 // When the flip button is clicked...
 flipButton.addEventListener("click", function() {
 	// Get the values from the input fields
