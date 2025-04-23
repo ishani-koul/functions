@@ -84,7 +84,7 @@ html, body {
 
 /* Title */
 h1 {
-	font-family: 'Oliver', sans-serif;
+	font-family: 'Oliver', "Caveat Brush";;
 	font-size: var(--title-font-size);
 	text-align: center;
 	margin-top: var(--margin-padding);
@@ -283,7 +283,7 @@ input::placeholder {
 
 .coin-result {
 	background-color: var(--text-color);
-	font-family: 'Oliver', sans-serif;
+	font-family: 'Oliver', "Caveat Brush";
 	font-size: 1.4rem;
 	color: var(--card-3-color);
 	text-align: center;

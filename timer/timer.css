@@ -84,7 +84,7 @@ html, body {
 
 /* Title */
 h1 {
-	font-family: 'Oliver', sans-serif;
+	font-family: 'Oliver', "Caveat Brush";
 	font-size: var(--title-font-size);
 	text-align: center;
 	margin-top: var(--margin-padding);
@@ -243,7 +243,7 @@ select option {
 }
 
 .highlighted {
-	font-family: 'Oliver', sans-serif;
+	font-family: 'Oliver', "Caveat Brush";
 	color: var(--card-2-color); 
 	font-size: var(--title-font-size);
 	padding: 1rem;
@@ -377,7 +377,7 @@ footer {
 	}
 
 	.highlighted {
-		font-family: 'Oliver', sans-serif;
+		font-family: 'Oliver', "Caveat Brush";
 		color: var(--card-2-color); 
 		font-size: calc(var(--title-font-size)*1.6);
 	}
