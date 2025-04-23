@@ -85,7 +85,7 @@ h1 {
 }
 
 #uni {
-	font-family: 'Oliver', "Just Me Again Down Here", sans-serif;
+	font-family: 'Oliver', "Caveat Brush";
 	font-size: 4.3rem;
 	margin-bottom: 0.5rem;
 	/* initially 2rem  */
@@ -190,6 +190,56 @@ footer p {
 }
 
 
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2000;
+}
+
+.modal-content {
+	font-family: var(--font-family);
+	background: var(--text-color);
+	color: var(--bg-color);
+	padding: 1.4rem;
+	max-width: 320px;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.modal-content h2 {
+	font-family: 'Oliver', sans-serif;
+	font-size: var(--paragraph-font-size);
+	margin-bottom: 1rem;
+}
+
+.modal-content p {
+	font-size: var(--label-font-size);
+	opacity: 0.8;
+	margin-bottom: 1.5rem;
+}
+
+/* #closeModal {
+	width: 100%;
+} */
+
+.modal-button {
+	font-family: var(--font-family);
+	font-size: var(--label-font-size);
+	border: 1px solid #1e1e1e;
+	padding: 0.4rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+
+
 @media (min-width:1200px) {
 
 	@keyframes float {
@@ -201,4 +251,20 @@ footer p {
 		animation: float 0.5s ease-in-out infinite;
 	}
 	
+	.modal-content {
+		max-width: 600px;
+		padding: 2rem;
+	}
+
+	.modal-content h2 {
+		font-size: 2rem;
+		margin-bottom: 1.4rem;
+	}
+	
+	.modal-content p {
+		font-size: calc(var(--label-font-size)*1.2);
+		opacity: 0.8;
+		margin-bottom: 1.5rem;
+	}
+
 }
