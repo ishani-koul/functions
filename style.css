@@ -5,6 +5,7 @@
 	font-style: normal;
 }
 
+
 :root {
 	--bg-color: #1e1e1e;
 	--text-color: #FEFADD;
@@ -13,6 +14,7 @@
 	--card-3-color: #F26726;
 	--title-font-size: 1.2rem;
 	--paragraph-font-size: 1.2rem;
+	--label-font-size: 0.875rem;
 	--margin: 1rem;
 	--padding: 1.4rem;
 	--sub-text:0.9rem;
@@ -83,9 +85,10 @@ h1 {
 }
 
 #uni {
-	font-family: 'Oliver', sans-serif;
+	font-family: 'Oliver', "Just Me Again Down Here", sans-serif;
 	font-size: 4.3rem;
-	margin-bottom: 2rem;
+	margin-bottom: 0.5rem;
+	/* initially 2rem  */
 	margin-top: 0rem;
 }
 
@@ -101,6 +104,12 @@ h1 {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	display: inline-block;
+}
+
+.sub-text {
+	font-family: var(--font-family);
+	font-size: var(--label-font-size);
+	color: #FEFADD;
 }
 
 @keyframes moveGradient {
