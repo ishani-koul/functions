@@ -9,7 +9,7 @@ const flipSound = document.getElementById("flipSound");
 // Disable the button initially
 flipButton.disabled = true;
 
-// Listen for typing in either input
+// Either input filled - check
 document.getElementById("option1").addEventListener("input", checkInputs);
 document.getElementById("option2").addEventListener("input", checkInputs);
 
@@ -62,5 +62,29 @@ flipButton.addEventListener("click", function() {
 		const sideToShow = isHeads ? side1 : side2;
 		sideToShow.classList.add("coin-result");
 	}, 1990);
+
+	// reset reference: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
+	// When the reset button is clicked, clear everything and reset the state
+	const resetButton = document.getElementById('resetButton');
+
+	resetButton.addEventListener('click', function () {
+	// Clear input fields
+	document.getElementById("option1").value = "";
+	document.getElementById("option2").value = "";
+
+	// Disable flip button again
+	flipButton.disabled = true;
+
+	// Reset the coin text
+	side1.textContent = "Option 1";
+	side2.textContent = "Option 2";
+
+	// Remove coin result style if added
+	side1.classList.remove("coin-result");
+	side2.classList.remove("coin-result");
+
+	// Optionally reset coin rotation visually
+	coin.style.transform = "rotateY(0deg)";
+});
 	
 });
