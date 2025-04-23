@@ -67,4 +67,30 @@ dilemmaInput.addEventListener("input", toggleButtonState);
 		return number < 10 ? "0" + number : number;
 	}
 
+	const resetButton = document.getElementById('resetButton');
+
+	resetButton.addEventListener('click', function () {
+	// Stop any active timer
+	clearInterval(countdown);
+
+	// Reset the timer display
+	timerBox.innerText = "00:00";
+	timerBox.classList.remove("result-on");
+
+	// Clear input
+	dilemmaInput.value = "";
+
+	// Reset dropdown
+	timeDropdown.value = "3";
+
+	// Disable the submit button again
+	submitButton.disabled = true;
+
+	// Hide suggestion card if shown
+	const suggestionCard = document.getElementById('suggestion');
+	if (suggestionCard) {
+		suggestionCard.classList.remove('show');
+	}
+});
+
 });

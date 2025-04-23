@@ -181,7 +181,6 @@ select option {
 .primary-button {
 	font-family: var(--font-family);
 	font-weight: 500;
-	width: 100%;
 	background-color: var(--card-2-color);
 	color: var(--text-color);
 	font-size: var(--label-font-size);
@@ -189,8 +188,7 @@ select option {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	box-sizing: border-box;
-	display: block;
+	flex: 2;
 }
 
 /* Sticky button area */
@@ -204,6 +202,28 @@ select option {
 	padding: 1rem;
 	text-align: center;
 	box-shadow: 0 -2px 10px rgba(0,0,0,0.2); 
+	flex: 1;
+	flex-direction: row;
+	align-items: stretch;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: stretch;
+	padding: 1rem;
+	width: 100%;
+}
+
+#resetButton {
+	flex: 1;
+	background-color: transparent;
+	color: var(--card-2-color);
+	border: 1px solid #313DE7;
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: var(--label-font-size);
+	padding: calc(var(--padding-small) * 1.2);
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 .scroll-wrapper {
@@ -335,7 +355,7 @@ footer {
 	.form-section {
 		display: flex;
 		justify-content: center;
-		align-items: flex-end;
+		align-items: flex-start;
 		gap: 3rem;
 		width: 100%;
 		max-width: 1000px;
