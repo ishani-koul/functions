@@ -8,9 +8,9 @@
 :root {
 	--bg-color: #1e1e1e;
 	--text-color: #FEFADD;
-	--card-1-color: #E29A01;
-	--card-2-color: #313DE7;
-	--card-3-color: #F26726;
+	--card-1-color: #FEB51B;
+	--card-2-color: #4853EA;
+	--card-3-color: #F4783E;
 	--title-font-size: 1.8rem;
 	--paragraph-font-size: 1rem;
 	--label-font-size: 0.875rem;
@@ -217,7 +217,7 @@ select option {
 	flex: 1;
 	background-color: transparent;
 	color: var(--card-2-color);
-	border: 1px solid #313DE7;
+	border: 1px solid #4853EA;
 	font-family: var(--font-family);
 	font-weight: 500;
 	font-size: var(--label-font-size);

@@ -9,9 +9,9 @@
 :root {
 	--bg-color: #1e1e1e;
 	--text-color: #FEFADD;
-	--card-1-color: #E29A01;
-	--card-2-color: #313DE7;
-	--card-3-color: #F26726;
+	--card-1-color: #FEB51B;
+	--card-2-color: #4853EA;
+	--card-3-color: #F4783E;
 	--title-font-size: 1.2rem;
 	--paragraph-font-size: 1.2rem;
 	--label-font-size: 0.875rem;
@@ -95,9 +95,9 @@ h1 {
 /* Gradient text - https://codepen.io/leocampos/pen/pPwwNR */
 .gradient-text {
 	background: linear-gradient(45deg, 
-	#E29A01 0%,
-	#F26726 50%,
-	#313DE7 99%
+	#FEB51B 0%,
+	#F4783E 50%,
+	#4853EA 99%
 );
 	background-size: 300% 300%;
 	animation: moveGradient 4s ease infinite;

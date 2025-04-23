@@ -83,8 +83,8 @@ flipButton.addEventListener("click", function() {
 	side1.classList.remove("coin-result");
 	side2.classList.remove("coin-result");
 
-	// Optionally reset coin rotation visually
-	coin.style.transform = "rotateY(0deg)";
+	// Optionally reset coin rotation visually - makes it turn - not needed
+	// coin.style.transform = "rotateY(0deg)";
 });
 	
 });
