@@ -84,7 +84,7 @@ html, body {
 
 /* Title */
 h1 {
-	font-family: 'Oliver', sans-serif;
+	font-family: 'Oliver', "Caveat Brush";
 	font-size: var(--title-font-size);
 	text-align: center;
 	margin-top: var(--margin-padding);
@@ -242,7 +242,7 @@ input::placeholder {
 }
 
 .highlighted-choice {
-	font-family: 'Oliver', sans-serif;
+	font-family: 'Oliver', "Caveat Brush";
 	color: var(--card-1-color);
 	font-size: var(--title-font-size);
 	font-weight: bold;
